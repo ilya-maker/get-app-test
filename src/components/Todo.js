@@ -29,10 +29,10 @@ export default function Todo({ todo }) {
         <Col span={2}>
           <Countdown date={todo.time} onComplete={() => dispatch(todoExpired(todo))}/>
         </Col>
-        <Col span={15} offset={2} className={styles.todo__text}>
+        <Col span={16} offset={2} className={styles.todo__text}>
           {todo.text}
         </Col>
-        <Col span={3}>
+        <Col span={2}>
           <Row justify="space-between">
             <Col span={12}>
               <Tooltip title="Delete">

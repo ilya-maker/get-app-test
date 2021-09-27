@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Input, Button, Row, Col, TimePicker } from 'antd';
 import { addTodo } from '../store/action-creators';
+import styles from '../assets/styles.module.css';
 
 export default function TodoForm() {
   const [text, setText] = useState('');
@@ -22,7 +23,7 @@ export default function TodoForm() {
   }
 
   return (
-    <Row>
+    <Row className={styles.form}>
       <Col span={4}>
         <TimePicker
           format='HH:mm'
